@@ -1,0 +1,27 @@
+{
+  "name": "electron-blueprint",
+  "version": "0.2.0",
+  "description": "My personal blueprint for creating an electron application.",
+  "main": "backend.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelblasdel/electron-blueprint.git"
+  },
+  "author": "Michael Blasdel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelblasdel/electron-blueprint/issues"
+  },
+  "homepage": "https://github.com/michaelblasdel/electron-blueprint#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "bootstrap": "^4.2.1",
+    "bootswatch": "^4.2.1",
+    "electron": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  }
+}

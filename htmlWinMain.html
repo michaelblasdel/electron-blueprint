@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Tumblr Sorter</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules\@fortawesome\fontawesome-free\css\all.min.css">
+    <link rel="stylesheet" href="node_modules\bootswatch\dist\darkly\bootstrap.min.css">
+
+    <style>
+        body {
+            -webkit-user-select: none;
+            line-height: 1.3em;
+            overflow: hidden;
+            border-left: 1px solid rgba(0,0,0,0.125);
+            border-right: 1px solid rgba(0,0,0,0.125);
+        }
+        .navbar-title {
+            -webkit-app-region: drag;
+            border-bottom: 1px solid rgba(0,0,0,0.125);
+            border-top: 1px solid rgba(0,0,0,0.3);
+            border-left: 1px solid rgba(0,0,0,0.3);
+            border-right: 1px solid rgba(0,0,0,0.3);
+        }
+        .navbar-title .btn {
+            -webkit-app-region: no-drag;
+            cursor: default;
+        }
+        .navbar-status {
+            border-top: 1px solid rgba(0,0,0,0.125);
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            border-left: 1px solid rgba(0,0,0,0.3);
+            border-right: 1px solid rgba(0,0,0,0.3);
+        }
+        .window-body {
+            overflow-y: auto;
+        }
+        ::-webkit-scrollbar {
+            background-color: #444;
+            width: .8em;
+
+        }
+        ::-webkit-scrollbar-thumb:window-inactive,
+        ::-webkit-scrollbar-thumb {
+            background:  #375a7f;
+            border-radius: .4em;
+        }
+        .window-sidebar {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-title navbar-light bg-light fixed-top shadow py-2">
+        <a class="navbar-brand" href="#" tabindex="-1"><i class="fas fa-shield-alt fa-lg text-info"></i> &nbsp;Blueprint</a>
+        <form class="form-inline">
+            <button class="btn btn-outline-info border-0 mr-1" type="button" onclick="remote.getCurrentWindow().toggleDevTools(); return false;" tabindex="-1" title="Developer Tools" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-tools"></i></button>
+            <button class="btn btn-outline-danger border-0" type="button" onclick="remote.getCurrentWindow().close(); return false;" tabindex="-1"><i class="fas fa-times"></i></button>
+        </form>
+    </nav>
+
+    <div class="window-body">
+        <div class="row m-0">
+            <div class="window-sidebar col-4 p-0">
+                <div class="container-fluid">
+                    <div class="card my-3">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <ul class="nav flex-column mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8 p-0">
+                <div class="container-fluid">
+                    <div class="card my-3">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-status navbar-light bg-light fixed-bottom shadow p-1">
+        <span class="navbar-text py-0 px-1">
+            Ready...
+        </span>
+    </nav>
+
+    <!-- JavaScript -->
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="htmlWinMain.js"></script>
+
+</body>
+</html>
