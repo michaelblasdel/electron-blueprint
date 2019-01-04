@@ -62,6 +62,8 @@
         <a class="navbar-brand" href="#" tabindex="-1"><i class="fas fa-shield-alt fa-lg text-info"></i> &nbsp;Blueprint</a>
         <form class="form-inline">
             <button class="btn btn-outline-info border-0 mr-1" type="button" onclick="remote.getCurrentWindow().toggleDevTools(); return false;" tabindex="-1" title="Developer Tools" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-tools"></i></button>
+            <button class="btn btn-outline-info border-0 mr-1" type="button" onclick="remote.getCurrentWindow().minimize(); return false;" tabindex="-1"><i class="fas fa-window-minimize"></i></button>
+            <button class="btn btn-outline-info border-0 mr-1 navbar-max" type="button" onclick="toggleWindowMax(); return false;" tabindex="-1"><i class="far fa-window-maximize"></i></button>
             <button class="btn btn-outline-danger border-0" type="button" onclick="remote.getCurrentWindow().close(); return false;" tabindex="-1"><i class="fas fa-times"></i></button>
         </form>
     </nav>

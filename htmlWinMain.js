@@ -16,3 +16,15 @@ function refreshWindowBody () {
     $(".window-body").height(actualHeight).css('margin-top',navHeight);
     $(".window-sidebar").css('min-height', actualHeight);
 }
+function toggleWindowMax() {
+    if (remote.getCurrentWindow().isMaximized()) {
+        remote.getCurrentWindow().unmaximize();
+        $(".navbar-max").empty().html(`<i class="far fa-window-maximize"></i>`);
+    } else {
+        remote.getCurrentWindow().maximize();
+        $(".navbar-max").empty().html(`<i class="fas fa-window-restore"></i>`);
+    }
+}
+$( document ).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
